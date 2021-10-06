@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mix Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+        
+		<div class="wrapper" id="res">
+            <center><img src="./img/logo.svg" alt="" srcset="" width="300px" style="margin-bottom: 20px;"></center>
+            <form action="" id="wizard" >
+                
+                
+                <h4></h4>
+                <section id="q1">
+                    <h3>Select Unit</h3>
+                            <center>
+                                <div class="form-holder">
+                                
+                                    <select name="" id="D1" class="form-control" required>
+                                        <option value="2" class="option">IMPERIAL</option>
+                                        <option value="1" class="option">METRIC</option>
+                                    </select>
+                                    <i class="zmdi zmdi-chevron-down"></i>
+                                </div>
+                            </center>  
+                                <div class="form-col" style="margin-top: 20px;">
+                                    <label for="">
+                                        Project Name
+                                    </label>
+                                    <div class="form-holder-right">
+                                        
+                                        <input type="text" id="project" class="form-control required" required>
+                                    </div>
+                                </div>
+                            
+                            
+                    
+                </section>
+        		<!-- SECTION 1 -->
+                <h4></h4>
+                <section id="q2">
+                    <h3>Base inputs </h3>
+                	<div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Target Voids 
+                                <svg version="1.1" id="void-tol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><g><path d="M17.962,24.725l1.806,0.096v2.531h-7.534v-2.406l1.045-0.094c0.568-0.063,0.916-0.254,0.916-1.014v-8.801
+                                    c0-0.699-0.188-0.92-0.791-0.92l-1.106-0.062v-2.626h5.666L17.962,24.725L17.962,24.725z M15.747,4.648
+                                    c1.394,0,2.405,1.047,2.405,2.374c0,1.331-1.014,2.313-2.438,2.313c-1.454,0-2.404-0.982-2.404-2.313
+                                    C13.31,5.695,14.26,4.648,15.747,4.648z M16,32C7.178,32,0,24.822,0,16S7.178,0,16,0c8.82,0,16,7.178,16,16S24.82,32,16,32z M16,3
+                                    C8.832,3,3,8.832,3,16s5.832,13,13,13s13-5.832,13-13S23.168,3,16,3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </label>
+                            <div class="form-holder-right">
+                                
+                                <input type="number" id="D10" class="form-control required" value="25" required>
+                                <!-- <i class="zmdi"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path d="M18.5 3.5l-15 15l2 2l15-15M7 4a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m10 10a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3z" fill="currentColor"/></svg></i> -->
+                               
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Replace some cement with fly ash or slag?
+                            </label>
+                            <div class="form-holder">
+                                <select name="" id="D11" class="form-control" required>
+                                    <option value="1" class="option">Yes</option>
+                                    <option value="2" class="option">No</option>
+                                </select>
+                                <i class="zmdi zmdi-chevron-down"></i>
+                            </div>
+                        </div>
+                	</div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Percent of fly ash or slag to replace cement
+                                <svg version="1.1" id="fly-tol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><g><path d="M17.962,24.725l1.806,0.096v2.531h-7.534v-2.406l1.045-0.094c0.568-0.063,0.916-0.254,0.916-1.014v-8.801
+                                    c0-0.699-0.188-0.92-0.791-0.92l-1.106-0.062v-2.626h5.666L17.962,24.725L17.962,24.725z M15.747,4.648
+                                    c1.394,0,2.405,1.047,2.405,2.374c0,1.331-1.014,2.313-2.438,2.313c-1.454,0-2.404-0.982-2.404-2.313
+                                    C13.31,5.695,14.26,4.648,15.747,4.648z M16,32C7.178,32,0,24.822,0,16S7.178,0,16,0c8.82,0,16,7.178,16,16S24.82,32,16,32z M16,3
+                                    C8.832,3,3,8.832,3,16s5.832,13,13,13s13-5.832,13-13S23.168,3,16,3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </label>
+                            <div class="form-holder-right">
+                                <i class="zmdi"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path d="M18.5 3.5l-15 15l2 2l15-15M7 4a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m10 10a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3z" fill="currentColor"/></svg></i>
+                                <input type="number" id="D12" class="form-control" value="25" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for=""  style="display: none;">
+                                Water Cement Ratio
+                                <svg version="1.1" id="water-tol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><g><path d="M17.962,24.725l1.806,0.096v2.531h-7.534v-2.406l1.045-0.094c0.568-0.063,0.916-0.254,0.916-1.014v-8.801
+                                    c0-0.699-0.188-0.92-0.791-0.92l-1.106-0.062v-2.626h5.666L17.962,24.725L17.962,24.725z M15.747,4.648
+                                    c1.394,0,2.405,1.047,2.405,2.374c0,1.331-1.014,2.313-2.438,2.313c-1.454,0-2.404-0.982-2.404-2.313
+                                    C13.31,5.695,14.26,4.648,15.747,4.648z M16,32C7.178,32,0,24.822,0,16S7.178,0,16,0c8.82,0,16,7.178,16,16S24.82,32,16,32z M16,3
+                                    C8.832,3,3,8.832,3,16s5.832,13,13,13s13-5.832,13-13S23.168,3,16,3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </label>
+                            <div class="form-holder-right" style="display: none;">
+                                <i class="zmdi"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path d="M18.5 3.5l-15 15l2 2l15-15M7 4a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m10 10a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3z" fill="currentColor"/></svg></i>
+                                <input type="number" id="D13" value="35" class="form-control" hidden required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                
+				<!-- SECTION 2 -->
+                <h4></h4>
+                <section id="q3">
+                	<h3>Aggregate and cement</h3>
+                    <div class="form-row">
+                        <div class="form-col" id="D16a">
+                            <label for="" >
+                                Aggregate Unit Weight lb/ft3 (ASTM C29)
+                                <svg version="1.1" id="unit-tol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><g><path d="M17.962,24.725l1.806,0.096v2.531h-7.534v-2.406l1.045-0.094c0.568-0.063,0.916-0.254,0.916-1.014v-8.801
+                                    c0-0.699-0.188-0.92-0.791-0.92l-1.106-0.062v-2.626h5.666L17.962,24.725L17.962,24.725z M15.747,4.648
+                                    c1.394,0,2.405,1.047,2.405,2.374c0,1.331-1.014,2.313-2.438,2.313c-1.454,0-2.404-0.982-2.404-2.313
+                                    C13.31,5.695,14.26,4.648,15.747,4.648z M16,32C7.178,32,0,24.822,0,16S7.178,0,16,0c8.82,0,16,7.178,16,16S24.82,32,16,32z M16,3
+                                    C8.832,3,3,8.832,3,16s5.832,13,13,13s13-5.832,13-13S23.168,3,16,3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </label>
+                            <div class="form-holder">
+                                <input type="number" id="D16" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Coarse Aggregate Specific Gravity
+                                <svg version="1.1" id="coarse-tol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><g><path d="M17.962,24.725l1.806,0.096v2.531h-7.534v-2.406l1.045-0.094c0.568-0.063,0.916-0.254,0.916-1.014v-8.801
+                                    c0-0.699-0.188-0.92-0.791-0.92l-1.106-0.062v-2.626h5.666L17.962,24.725L17.962,24.725z M15.747,4.648
+                                    c1.394,0,2.405,1.047,2.405,2.374c0,1.331-1.014,2.313-2.438,2.313c-1.454,0-2.404-0.982-2.404-2.313
+                                    C13.31,5.695,14.26,4.648,15.747,4.648z M16,32C7.178,32,0,24.822,0,16S7.178,0,16,0c8.82,0,16,7.178,16,16S24.82,32,16,32z M16,3
+                                    C8.832,3,3,8.832,3,16s5.832,13,13,13s13-5.832,13-13S23.168,3,16,3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </label>
+                            <div class="form-holder">
+                                <input type="number" id="D17" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Cement Specific Gravity
+                                <svg version="1.1" id="cement-tol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><g><path d="M17.962,24.725l1.806,0.096v2.531h-7.534v-2.406l1.045-0.094c0.568-0.063,0.916-0.254,0.916-1.014v-8.801
+                                    c0-0.699-0.188-0.92-0.791-0.92l-1.106-0.062v-2.626h5.666L17.962,24.725L17.962,24.725z M15.747,4.648
+                                    c1.394,0,2.405,1.047,2.405,2.374c0,1.331-1.014,2.313-2.438,2.313c-1.454,0-2.404-0.982-2.404-2.313
+                                    C13.31,5.695,14.26,4.648,15.747,4.648z M16,32C7.178,32,0,24.822,0,16S7.178,0,16,0c8.82,0,16,7.178,16,16S24.82,32,16,32z M16,3
+                                    C8.832,3,3,8.832,3,16s5.832,13,13,13s13-5.832,13-13S23.168,3,16,3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </label>
+                            <div class="form-holder">
+                                <input type="number" id="D18" value="3.15" step="any" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <span  id="fly-ash">
+                                <label for="">
+                                    Fly Ash Specific Gravity
+                                </label>
+                                <div class="form-holder">
+                                    <input type="number" id="D19" class="form-control"  required>
+                                </div>
+                            </span>
+                            
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <!-- SECTION 3 -->
+                <h4></h4>
+                <section id="q4">
+                    <h3 style="margin-bottom: 37px;">Hydration stabilizer <svg version="1.1" id="hydra-tol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><g><path d="M17.962,24.725l1.806,0.096v2.531h-7.534v-2.406l1.045-0.094c0.568-0.063,0.916-0.254,0.916-1.014v-8.801
+                        c0-0.699-0.188-0.92-0.791-0.92l-1.106-0.062v-2.626h5.666L17.962,24.725L17.962,24.725z M15.747,4.648
+                        c1.394,0,2.405,1.047,2.405,2.374c0,1.331-1.014,2.313-2.438,2.313c-1.454,0-2.404-0.982-2.404-2.313
+                        C13.31,5.695,14.26,4.648,15.747,4.648z M16,32C7.178,32,0,24.822,0,16S7.178,0,16,0c8.82,0,16,7.178,16,16S24.82,32,16,32z M16,3
+                        C8.832,3,3,8.832,3,16s5.832,13,13,13s13-5.832,13-13S23.168,3,16,3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></h3>
+                    
+                    <div class="form-row">
+                        <div class="form-col" id="D24a">
+                            <label for="">
+                                Temperature (fahrenheit)
+                            </label>
+                            <div class="form-holder">
+                                  <select name="" id="D24" class="form-control" required>
+                                    <option value="3" class="option">80-89</option>
+                                    <option value="1" class="option">Below 60</option>
+                                    <option value="2" class="option">60-79</option>
+                                    <option value="4" class="option">90 and above</option>
+                                </select>
+                                <i class="zmdi zmdi-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Is it less than 30% humidity?
+                            </label>
+                            <div class="form-holder">
+                                <select name="" id="D25" class="form-control" required>
+                                    <option value="2" class="option">No</option>
+                                    <option value="1" class="option">Yes</option>
+                                    
+                                </select>
+                                <i class="zmdi zmdi-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+            </form>
+            <div style="display: none;" id="results" class="wizard" style="position: relative;background: #fff;padding: 64px 58px 40px;font-family: 'Poppins'">
+                <i class="zmdi zmdi-print" id="print" style="margin-top: -40px;position: absolute;margin-left: 85%;cursor: pointer;"></i>
+                <h3 style="font-family: 'Poppins-SemiBold';font-size: 35px;color: #3377c0;text-transform: uppercase;text-align: center;font-weight: 600;letter-spacing: 3px;">Calculated Mix</h3>
+                <center>
+                    <h4 style="color: #3377c0;">Project Name : <span id="pname"></span></h4>
+                </center>
+                
+                <table style="width: 100%;color: #333;margin-top: 20px;">
+                    <tbody>
+                        <tr>
+                            <th colspan="2" style="border-bottom: black solid 1px;">Mix Design</th>
+                        </tr>
+                        <tr>
+                            <td>Design Voids </td>
+                            <th id="i1" style="text-align: right;"></th>
+                        </tr>
+                        <tr >
+                            <td>Water/Cement Ratio</td>
+                            <th id="i4" style="text-align: right;"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="width: 100%;color: #333;">
+                    <tbody>
+                        <tr>
+                            <th colspan="2" style="border-bottom: black solid 1px;">Outputs</th>
+                        </tr>
+                        <tr>
+                            <td>Aggregate</td>
+                            <th id="D58" style="text-align: right;"></th>
+                        </tr>
+                        <tr>
+                            <td>Cement</td>
+                            <th id="D59" style="text-align: right;"></th>
+                        </tr>
+                        <tr>
+                            <td>Fly ash</td>
+                            <th id="D60" style="text-align: right;"></th>
+                        </tr>
+                        <tr >
+                            <td>Water</td>
+                            <th id="D62" style="text-align: right;"></th>
+                        </tr>
+                        <tr>
+                            <td>Hydration Stabilizer</td>
+                            <th id="D65" style="text-align: right;"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="width: 100%;color: #333; margin-bottom: 40px;">
+                    <tbody>
+                        <tr>
+                            <th colspan="2" style="border-bottom: black solid 1px;">Inputs</th>
+                        </tr>
+                        <tr>
+                            <td>Target Voids </td>
+                            <th id="i11" style="text-align: right;"></th>
+                        </tr>
+                        <tr >
+                            <td>Aggregate Unit Weight (ASTM C29)</td>
+                            <th  id="i5" style="text-align: right;"></th>
+                        </tr>
+                        <tr>
+                            <td>Coarse Aggregate Specific Gravity</td>
+                            <th id="i6" style="text-align: right;"></th>
+                        </tr>
+                        <tr>
+                            <td>Cement Specific Gravity</td>
+                            <th id="i7" style="text-align: right;"></th>
+                        </tr>
+                        <tr>
+                            <td>Fly Ash Specific Gravity</td>
+                            <th id="i8" style="text-align: right;"></th>
+                        </tr>
+                        <tr>
+                            <td>Void Space</td>
+                            <th id="i9" style="text-align: right;"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <table style="width: 100%;color: #333; margin-bottom: 40px;">
+                    <tbody>
+                        <tr>
+                            <th colspan="2" style="border-bottom: black solid 1px;">Inputs</th>
+                        </tr>
+                        <tr>
+                            <td>Target Voids </td>
+                            <th id="i1"></th>
+                        </tr>
+                        <tr>
+                            <td>Would you like to use fly ash?</td>
+                            <th id="i2"></th>
+                        </tr>
+                        <tr>
+                            <td>Fly Ash</td>
+                            <th id="i3"></th>
+                        </tr>
+                        <tr >
+                            <td>Water Cement Ratio</td>
+                            <th id="i4"></th>
+                        </tr>
+                        <tr >
+                            <td>Aggregate Unit Weight (ASTM C29)</td>
+                            <th  id="i5"></th>
+                        </tr>
+                        <tr>
+                            <td>Coarse Aggregate Specific Gravity</td>
+                            <th id="i6"></th>
+                        </tr>
+                        <tr>
+                            <td>Cement Specific Gravity</td>
+                            <th id="i7"></th>
+                        </tr>
+                        <tr>
+                            <td>Fly Ash Specific Gravity</td>
+                            <th id="i8"></th>
+                        </tr>
+                        <tr>
+                            <td>Void Space</td>
+                            <th id="i9"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <table style="width: 100%;color: #333;">
+                    <tbody>
+                        <tr>
+                            <th colspan="2" style="border-bottom: black solid 1px;">Outputs</th>
+                        </tr>
+                        <tr>
+                            <td>Aggregate</td>
+                            <th id="D58"></th>
+                        </tr>
+                        <tr>
+                            <td>Cement</td>
+                            <th id="D59"></th>
+                        </tr>
+                        <tr>
+                            <td>Fly ash</td>
+                            <th id="D60"></th>
+                        </tr>
+                        <tr >
+                            <td>Total Cementitious</td>
+                            <th style="border-top: black solid 1px;" id="D61"></th>
+                        </tr>
+                        <tr >
+                            <td>Water</td>
+                            <th style="border-top: black solid 1px;" id="D62"></th>
+                        </tr>
+                        <tr>
+                            <td>Water cement ratio </td>
+                            <th id="D63"></th>
+                        </tr>
+                        <tr>
+                            <td>Hydration Stabilizer - <span id="ll"></span></td>
+                            <th id="D65"></th>
+                        </tr>
+                    </tbody>
+                </table> -->
+                    <center>
+                        <div class="reset-button no-print" id="reset"   style="margin-top: 20px;">Reset</div>
+                    </center>
+                
+            </div>
+		</div>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+		<script src="js/jquery.steps.js"></script>
+        <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+		<script src="js/main.js"></script>
+        
+
+</body>
+</html>
